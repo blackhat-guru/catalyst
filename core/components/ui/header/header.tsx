@@ -53,7 +53,7 @@ const Header = ({
   search,
 }: Props) => (
   <div className={cn('relative', className)}>
-    <header className="flex h-[92px] items-center justify-between gap-1 overflow-y-visible bg-white px-4 2xl:container sm:px-10 lg:gap-8 lg:px-12 2xl:mx-auto 2xl:px-0">
+    <header className="brijesh flex h-[92px] items-center justify-between gap-1 overflow-y-visible bg-white px-4 2xl:container sm:px-10 lg:gap-8 lg:px-12 2xl:mx-auto 2xl:px-0">
       <CustomLink className="overflow-hidden text-ellipsis py-3" href="/">
         {typeof logo === 'object' ? (
           <BcImage
@@ -69,7 +69,7 @@ const Header = ({
         )}
       </CustomLink>
 
-      <NavigationMenuPrimitive.Root className="hidden lg:block">
+      <NavigationMenuPrimitive.Root className="hidden lg:block brijesh">
         <NavigationMenuPrimitive.List className="flex items-center gap-2 lg:gap-4">
           {links.map((link) =>
             link.groups && link.groups.length > 0 ? (
