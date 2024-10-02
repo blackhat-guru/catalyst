@@ -1,29 +1,41 @@
 {
   "name": "menos-flips-commerce",
-  "description": "Catalyst is BigCommerce's composable front-end framework designed for building custom ecommerce storefronts.",
+  "description": "Catalyst is BigCommerce's composable front-end framework designed for building custom ecommerce storefronts using Next.js Commerce.",
   "keywords": [
     "bigcommerce",
     "ecommerce",
     "storefront",
     "headless",
     "composable",
-    "nextjs"
+    "nextjs",
+    "commerce"
   ],
   "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@9.7.0",
   "scripts": {
-    "dev": "dotenv -e .env.local -- turbo run dev",
-    "build": "dotenv -e .env.local -- turbo run build",
-    "lint": "turbo lint",
-    "typecheck": "turbo typecheck"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "typecheck": "tsc --noEmit",
+    "export": "next export",
+    "analyze": "cross-env ANALYZE=true next build"
+  },
+  "dependencies": {
+    "@vercel/commerce": "^1.0.0",
+    "next": "13.4.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "^5.6.2"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.8",
     "dotenv-cli": "^7.4.2",
     "turbo": "^2.1.2",
-    "typescript": "^5.6.2"
+    "eslint": "^8.46.0",
+    "eslint-config-next": "^13.4.12"
   }
 }
